@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DataController</string>
+    <string name="code_bar_capture_prompt_text">将二维码放入框内</string>
+    <string name="label_account">账户</string>
+    <string name="label_password">密码</string>
+    <string name="submit">提 交</string>
+    <string name="activity_device_bind_label_device_code">设备编号:</string>
+    <string name="activity_device_label_device_name">设备名称:</string>
+    <string name="login">登录</string>
+</resources>

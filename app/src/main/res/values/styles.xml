@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/bg_app</item>
+    </style>
+
+    <style name="AppText" parent="TextAppearance.AppCompat" />
+
+    <style name="AppText.ColorPrimary">
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="AppText.DarkGray">
+        <item name="android:textColor">@color/textDarkGray</item>
+    </style>
+
+    <style name="AppText.LightGray">
+        <item name="android:textColor">@color/textLightGray</item>
+    </style>
+
+    <style name="AppText.InfoGray">
+        <item name="android:textColor">@color/textInfoGray</item>
+    </style>
+
+    <style name="AppText.ColorPrimary.SizePrimary">
+        <item name="android:textSize">@dimen/textPrimary</item>
+    </style>
+
+    <style name="AppText.ColorPrimary.Secondary">
+        <item name="android:textSize">@dimen/textSecondary</item>
+    </style>
+
+    <style name="AppText.ColorPrimary.Small">
+        <item name="android:textSize">@dimen/textSmall</item>
+    </style>
+
+    <style name="AppText.ColorPrimary.20">
+        <item name="android:textSize">@dimen/text20</item>
+    </style>
+
+    <style name="AppText.ColorPrimary.18">
+        <item name="android:textSize">@dimen/text18</item>
+    </style>
+
+    <style name="AppText.ColorPrimary.16">
+        <item name="android:textSize">@dimen/text16</item>
+    </style>
+
+    <style name="AppText.InfoGray.18">
+        <item name="android:textSize">@dimen/text18</item>
+    </style>
+
+
+</resources>

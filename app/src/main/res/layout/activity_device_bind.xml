@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/activity_toolbar" />
+
+    <ImageView
+        android:id="@+id/img_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/header_device_bind"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <LinearLayout
+        android:id="@+id/device_code_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/left_line"
+        app:layout_constraintRight_toLeftOf="@id/right_line"
+        app:layout_constraintTop_toBottomOf="@id/img_header">
+
+        <TextView
+            style="@style/AppText.ColorPrimary.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/activity_device_bind_label_device_code" />
+
+        <TextView
+            style="@style/AppText.ColorPrimary.18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textRed"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold"
+            tools:text="1122" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/device_name_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/left_line"
+        app:layout_constraintRight_toLeftOf="@id/right_line"
+        app:layout_constraintTop_toBottomOf="@id/device_code_container">
+
+        <TextView
+            style="@style/AppText.ColorPrimary.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/activity_device_label_device_name" />
+
+        <EditText
+            android:id="@+id/device_name"
+            style="@style/AppText.ColorPrimary.18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_rect"
+            android:padding="@dimen/margin4"
+            android:singleLine="true"
+            tools:text="1122" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_btn_red_rect"
+        android:gravity="center"
+        android:text="提交设置"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text18"
+        app:layout_constraintLeft_toRightOf="@id/left_line"
+        app:layout_constraintRight_toLeftOf="@id/right_line"
+        app:layout_constraintTop_toBottomOf="@id/device_name_container" />
+
+</android.support.constraint.ConstraintLayout>

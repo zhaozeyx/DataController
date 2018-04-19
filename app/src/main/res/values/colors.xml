@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f53229</color>
+    <color name="colorPrimaryDark">#f53229</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="textPrimary">#2b2b2b</color>
+    <color name="textDarkGray">#777777</color>
+    <color name="textLightGray">#bbbbbb</color>
+    <color name="textRed">#f72c2b</color>
+    <color name="textInfoGray">#cfcfcf</color>
+    <color name="textColorHinWhite">#facdcb</color>
+
+    <color name="bgColorRed">#f53229</color>
+    <color name="borderColorGray">#d3d3d3</color>
+    <color name="bg_app">#f8f8f8</color>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.soocedu.datacontroller.bean.DeviceModel" />
+
+        <import
+            alias="List"
+            type="android.databinding.ObservableList" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="deviceModel"
+            type="DeviceModel" />
+
+        <variable
+            name="deviceList"
+            type="List&lt;DeviceModel&gt;" />
+    </data>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin4"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:contentPadding="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{deviceList.contains(deviceModel) ? @drawable/bg_white_red_border : @drawable/bg_white}"
+            android:padding="@dimen/margin8"
+            tools:selected="true">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin8"
+                android:src="@mipmap/ic_device"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/device_name"
+                style="@style/AppText.ColorPrimary.16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin8"
+                android:maxLength="10"
+                android:text="@{deviceModel.title}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon"
+                tools:text="大会议室的小米电视" />
+
+            <ImageView
+                android:id="@+id/status_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_selected"
+                android:visibility="@{deviceList.contains(deviceModel) ? View.VISIBLE : View.GONE}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</layout>

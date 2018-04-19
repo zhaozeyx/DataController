@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:text="账号登录"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text20"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin8"
+                android:src="@mipmap/ic_username" />
+
+            <EditText
+                android:id="@+id/account_edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:drawableBottom="@drawable/bg_edit_line"
+                android:gravity="center_vertical"
+                android:hint="用户名"
+                android:paddingLeft="@dimen/margin4"
+                android:paddingRight="@dimen/margin4"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textColorHinWhite"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin8"
+                android:src="@mipmap/ic_password" />
+
+            <EditText
+                android:id="@+id/password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:drawableBottom="@drawable/bg_edit_line"
+                android:gravity="center_vertical"
+                android:hint="登录密码"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/margin4"
+                android:paddingRight="@dimen/margin4"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/textColorHinWhite"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text16" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin24"
+            android:background="@drawable/bg_white"
+            android:text="@string/login"
+            android:textColor="@color/textRed" />
+
+    </LinearLayout>
+
+</FrameLayout>
